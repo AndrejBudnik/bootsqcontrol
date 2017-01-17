@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import sample.Constants?>
+<?import java.net.URL?>
+<TabPane fx:id="tabPane" prefHeight="514.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller.MainView">
+   <tabs>
+      <Tab><text><Constants fx:constant="GUI_CUSTOMER_TAB"/></text>
+         <content>
+            <GridPane alignment="center" hgap="10" vgap="10">
+               <children>
+                  <AnchorPane prefHeight="462.0" prefWidth="514.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <children>
+                        <TableView fx:id="customerTable" layoutX="-9.0" prefHeight="345.0" prefWidth="591.0">
+                           <columns>
+                               <TableColumn fx:id="customerIdCol" prefWidth="56.0" ><text><Constants fx:constant="GUI_COLUMN_ID"/></text></TableColumn>
+                               <TableColumn fx:id="customerNameCol" prefWidth="159.0" ><text><Constants fx:constant="GUI_COLUMN_NAME"/></text></TableColumn>
+                               <TableColumn fx:id="customerNumCol" prefWidth="183.0" ><text><Constants fx:constant="GUI_COLUMN_NUM"/></text></TableColumn>
+                               <TableColumn fx:id="customerMailCol" prefWidth="192.0" ><text><Constants fx:constant="GUI_COLUMN_MAIL"/></text></TableColumn>
+                           </columns>
+                           <contextMenu>
+                              <ContextMenu>
+                                <items>
+                                    <MenuItem fx:id="contextDeleteCustomer" mnemonicParsing="false"><text><Constants fx:constant="GUI_CONTEXT_DELETE"/></text></MenuItem>
+                                </items>
+                              </ContextMenu>
+                           </contextMenu>
+                        </TableView>
+                        <Button fx:id="addCustomer" layoutX="75.0" layoutY="394.0" mnemonicParsing="false" onAction="#onActionAddCustomer" prefHeight="25.0" prefWidth="72.0" ><text><Constants fx:constant="GUI_BUTTON_ADD" /></text></Button>
+                        <Button fx:id="refreshCustomer" layoutX="256.0" layoutY="394.0" mnemonicParsing="false" onAction="#onActionRefreshCustomer" ><text><Constants fx:constant="GUI_BUTTON_REFRESH" /></text></Button>
+                        <Button fx:id="exitCustomer" layoutX="460.0" layoutY="394.0" mnemonicParsing="false" onAction="#onActionExit" ><text><Constants fx:constant="GUI_BUTTON_EXIT" /></text></Button>
+                         <TextField fx:id="customerIdSort" layoutX="-9.0" layoutY="343.0" prefHeight="25.0" prefWidth="56.0" />
+                         <TextField fx:id="customerNameSort" layoutX="47.0" layoutY="343.0" prefHeight="25.0" prefWidth="159.0" />
+                         <TextField fx:id="customerNumSort" layoutX="206.0" layoutY="343.0" prefHeight="25.0" prefWidth="183.0" />
+                         <TextField fx:id="customerMailSort" layoutX="389.0" layoutY="343.0" prefHeight="25.0" prefWidth="192.0" />
+                     </children>
+                  </AnchorPane>
+               </children>
+               <columnConstraints>
+                  <ColumnConstraints />
+                  <ColumnConstraints />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints />
+                  <RowConstraints />
+               </rowConstraints>
+            </GridPane>
+         </content>
+      </Tab>
+      <Tab><text><Constants fx:constant="GUI_ORDER_TAB"/></text>
+         <content>
+            <GridPane alignment="center" hgap="10" vgap="10">
+               <children>
+                  <AnchorPane prefHeight="462.0" prefWidth="514.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <children>
+                        <TableView fx:id="orderTable" layoutX="-9.0" prefHeight="345.0" prefWidth="591.0">
+                           <columns>
+                              <TableColumn fx:id="orderIdCol" prefWidth="75.0" ><text><Constants fx:constant="GUI_COLUMN_ID"/></text></TableColumn>
+                              <TableColumn fx:id="orderCustomerCol" prefWidth="137.0" ><text><Constants fx:constant="GUI_COLUMN_CUSTOMER"/></text></TableColumn>
+                              <TableColumn fx:id="orderCountCol" prefWidth="50.0" ><text><Constants fx:constant="GUI_COLUMN_COUNT"/></text></TableColumn>
+                              <TableColumn fx:id="orderFasonCol" prefWidth="131.0" ><text><Constants fx:constant="GUI_COLUMN_FASON"/></text></TableColumn>
+                              <TableColumn fx:id="orderDateCol" prefWidth="101.0" ><text><Constants fx:constant="GUI_COLUMN_DATE"/></text></TableColumn>
+                              <TableColumn fx:id="orderSizeCol" prefWidth="96.0" ><text><Constants fx:constant="GUI_COLUMN_SIZE"/></text></TableColumn>
+                           </columns>
+                            <contextMenu>
+                                <ContextMenu>
+                                    <items>
+                                        <MenuItem fx:id="contextDeleteOrder" mnemonicParsing="false" ><text><Constants fx:constant="GUI_CONTEXT_DELETE"/></text></MenuItem>
+                                    </items>
+                                </ContextMenu>
+                            </contextMenu>
+                        </TableView>
+                        <Button fx:id="addOrder" layoutX="75.0" layoutY="394.0" mnemonicParsing="false" onAction="#onActionAddOrder" prefHeight="25.0" prefWidth="72.0" ><text><Constants fx:constant="GUI_BUTTON_ADD"/></text></Button>
+                        <Button fx:id="refreshOrder" layoutX="256.0" layoutY="394.0" mnemonicParsing="false" onAction="#onActionRefreshOrder" ><text><Constants fx:constant="GUI_BUTTON_REFRESH"/></text></Button>
+                        <Button fx:id="exitOrder" layoutX="460.0" layoutY="394.0" mnemonicParsing="false" onAction="#onActionExit" ><text><Constants fx:constant="GUI_BUTTON_EXIT"/></text></Button>
+                         <TextField fx:id="orderIdSort" layoutX="-9.0" layoutY="343.0" prefHeight="25.0" prefWidth="75.0" />
+                         <TextField fx:id="orderCustSort" layoutX="66.0" layoutY="343.0" prefHeight="25.0" prefWidth="137.0" />
+                         <TextField fx:id="orderCountSort" layoutX="203.0" layoutY="343.0" prefHeight="25.0" prefWidth="50.0" />
+                         <TextField fx:id="orderFasonSort" layoutX="253.0" layoutY="343.0" prefHeight="25.0" prefWidth="131.0" />
+                         <TextField fx:id="orderDateSort" layoutX="384.0" layoutY="343.0" prefHeight="25.0" prefWidth="101.0" />
+                         <TextField fx:id="orderSizeSort" layoutX="485.0" layoutY="343.0" prefHeight="25.0" prefWidth="96.0" />
+                     </children>
+                  </AnchorPane>
+               </children>
+               <columnConstraints>
+                  <ColumnConstraints />
+                  <ColumnConstraints />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints />
+                  <RowConstraints />
+               </rowConstraints>
+            </GridPane>
+         </content>
+      </Tab>
+      <Tab><text><Constants fx:constant="GUI_EMPLOYEE_TAB"/></text>
+         <content>
+            <GridPane alignment="center" hgap="10" vgap="10">
+               <children>
+                  <AnchorPane prefHeight="462.0" prefWidth="514.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <children>
+                        <TableView fx:id="empTable" layoutX="-9.0" prefHeight="345.0" prefWidth="591.0">
+                           <columns>
+                              <TableColumn fx:id="empIdCol" prefWidth="39.0" ><text><Constants fx:constant="GUI_COLUMN_ID"/></text></TableColumn>
+                              <TableColumn fx:id="empNameCol" prefWidth="127.0" ><text><Constants fx:constant="GUI_COLUMN_NAME"/></text></TableColumn>
+                              <TableColumn fx:id="empPostCol" prefWidth="120.0" ><text><Constants fx:constant="GUI_COLUMN_POST"/></text></TableColumn>
+                              <TableColumn fx:id="empSalaryCol" prefWidth="158.0" ><text><Constants fx:constant="GUI_COLUMN_SALARY"/></text></TableColumn>
+                              <TableColumn fx:id="empNumCol" prefWidth="146.0" ><text><Constants fx:constant="GUI_COLUMN_NUM"/></text></TableColumn>
+                           </columns>
+                            <contextMenu>
+                                <ContextMenu>
+                                    <items>
+                                        <MenuItem fx:id="contextDeleteEmp" mnemonicParsing="false" ><text><Constants fx:constant="GUI_CONTEXT_DELETE"/></text></MenuItem>
+                                    </items>
+                                </ContextMenu>
+                            </contextMenu>
+                        </TableView>
+                        <Button fx:id="addEmp" layoutX="75.0" layoutY="394.0" mnemonicParsing="false" onAction="#onActionAddEmp" prefHeight="25.0" prefWidth="72.0" ><text><Constants fx:constant="GUI_BUTTON_ADD"/></text></Button>
+                        <Button fx:id="refreshEmployee" layoutX="256.0" layoutY="394.0" mnemonicParsing="false" onAction="#onActionRefreshEmployee" ><text><Constants fx:constant="GUI_BUTTON_REFRESH"/></text></Button>
+                        <Button fx:id="exitEmployee" layoutX="460.0" layoutY="394.0" mnemonicParsing="false" onAction="#onActionExit" ><text><Constants fx:constant="GUI_BUTTON_EXIT"/></text></Button>
+                        <TextField fx:id="empIdSort" layoutX="-9.0" layoutY="343.0" prefHeight="25.0" prefWidth="39.0" />
+                        <TextField fx:id="empNameSort" layoutX="30.0" layoutY="343.0" prefHeight="25.0" prefWidth="127.0" />
+                        <TextField fx:id="empPostSort" layoutX="157.0" layoutY="343.0" prefHeight="25.0" prefWidth="120.0" />
+                        <TextField fx:id="empSalarySort" layoutX="277.0" layoutY="343.0" prefHeight="25.0" prefWidth="158.0" />
+                        <TextField fx:id="empNumSort" layoutX="435.0" layoutY="343.0" prefHeight="25.0" prefWidth="146.0" />
+                     </children>
+                  </AnchorPane>
+               </children>
+               <columnConstraints>
+                  <ColumnConstraints />
+                  <ColumnConstraints />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints />
+                  <RowConstraints />
+               </rowConstraints>
+            </GridPane>
+         </content>
+      </Tab>
+      <Tab><text><Constants fx:constant="GUI_PLAN"/></text>
+         <content>
+            <GridPane alignment="center" hgap="10" vgap="10">
+               <children>
+                  <AnchorPane prefHeight="462.0" prefWidth="514.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <children>
+                        <TableView fx:id="planTable" layoutX="-9.0" prefHeight="345.0" prefWidth="591.0">
+                           <columns>
+                              <TableColumn fx:id="planIdCol" prefWidth="75.0" ><text><Constants fx:constant="GUI_COLUMN_ID"/></text></TableColumn>
+                              <TableColumn fx:id="planOrderNumCol" prefWidth="75.0" ><text><Constants fx:constant="GUI_COLUMN_ORDER"/></text></TableColumn>
+                              <TableColumn fx:id="planDateCol" prefWidth="75.0" ><text><Constants fx:constant="GUI_COLUMN_DATE"/></text></TableColumn>
+                              <TableColumn fx:id="planEmpCol" prefWidth="126.0" ><text><Constants fx:constant="GUI_COLUMN_EXECUTOR"/></text></TableColumn>
+                              <TableColumn fx:id="planSizeCol" prefWidth="51.0" ><text><Constants fx:constant="GUI_COLUMN_SIZE"/></text></TableColumn>
+                              <TableColumn fx:id="planFasonCol" prefWidth="54.0" ><text><Constants fx:constant="GUI_COLUMN_FASON"/></text></TableColumn>
+                              <TableColumn fx:id="planCountCol" prefWidth="56.0" ><text><Constants fx:constant="GUI_COLUMN_COUNT"/></text></TableColumn>
+                              <TableColumn fx:id="planActualCol" prefWidth="78.0" ><text><Constants fx:constant="GUI_COLUMN_DONE"/></text></TableColumn>
+                           </columns>
+                            <contextMenu>
+                                <ContextMenu>
+                                    <items>
+                                        <MenuItem fx:id="contextDeletePlan" mnemonicParsing="false" ><text><Constants fx:constant="GUI_CONTEXT_DELETE"/></text></MenuItem>
+                                    </items>
+                                </ContextMenu>
+                            </contextMenu>
+                        </TableView>
+                        <Button fx:id="addPlan" layoutX="75.0" layoutY="394.0" mnemonicParsing="false" onAction="#onActionAddPlan" prefHeight="25.0" prefWidth="72.0"><text><Constants fx:constant="GUI_BUTTON_ADD"/></text></Button>
+                        <Button fx:id="refreshPlan" layoutX="256.0" layoutY="394.0" mnemonicParsing="false" onAction="#onActionRefreshPlan" ><text><Constants fx:constant="GUI_BUTTON_REFRESH"/></text></Button>
+                        <Button fx:id="exitPlan" layoutX="460.0" layoutY="394.0" mnemonicParsing="false"  onAction="#onActionExit" ><text><Constants fx:constant="GUI_BUTTON_EXIT"/></text></Button>
+                        <TextField fx:id="planIdSort" layoutX="-9.0" layoutY="343.0" prefHeight="25.0" prefWidth="75.0" />
+                        <TextField fx:id="planOrderSort" layoutX="66.0" layoutY="343.0" prefHeight="25.0" prefWidth="75.0" />
+                        <TextField fx:id="planDateSort" layoutX="141.0" layoutY="343.0" prefHeight="25.0" prefWidth="75.0" />
+                        <TextField fx:id="planEmpSort" layoutX="216.0" layoutY="343.0" prefHeight="25.0" prefWidth="126.0" />
+                        <TextField fx:id="planSizeSort" layoutX="342.0" layoutY="343.0" prefHeight="25.0" prefWidth="51.0" />
+                        <TextField fx:id="planFasonSort" layoutX="393.0" layoutY="343.0" prefHeight="25.0" prefWidth="54.0" />
+                        <TextField fx:id="planCountSort" layoutX="447.0" layoutY="343.0" prefHeight="25.0" prefWidth="56.0" />
+                        <TextField fx:id="planActualSort" layoutX="503.0" layoutY="343.0" prefHeight="25.0" prefWidth="78.0" />
+                     </children>
+                  </AnchorPane>
+               </children>
+               <columnConstraints>
+                  <ColumnConstraints />
+                  <ColumnConstraints />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints />
+                  <RowConstraints />
+               </rowConstraints>
+            </GridPane>
+         </content>
+      </Tab>
+      <Tab><text><Constants fx:constant="GUI_DEFECT_MONITOR_TAB"/></text>
+         <content>
+            <GridPane alignment="center" hgap="10" vgap="10">
+               <children>
+                  <AnchorPane prefHeight="462.0" prefWidth="514.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <children>
+                        <TableView fx:id="defectMonTable"  layoutX="-9.0" prefHeight="345.0" prefWidth="591.0">
+                           <columns>
+                              <TableColumn fx:id="defConPlanNumCol" prefWidth="69.0" ><text><Constants fx:constant="GUI_PLAN"/></text></TableColumn>
+                              <TableColumn fx:id="defConDateCol" prefWidth="125.0" ><text><Constants fx:constant="GUI_COLUMN_DATE"/></text></TableColumn>
+                              <TableColumn fx:id="defConCountCol" prefWidth="90.0" ><text><Constants fx:constant="GUI_COLUMN_DEFECT_COUNT"/></text></TableColumn>
+                              <TableColumn fx:id="defConDefectCol" prefWidth="338.0" ><text><Constants fx:constant="GUI_COLUMN_DEFECT_TYPE"/></text></TableColumn>
+                           </columns>
+                            <contextMenu>
+                                <ContextMenu>
+                                    <items>
+                                        <MenuItem fx:id="contextDeleteDefMon" mnemonicParsing="false" ><text><Constants fx:constant="GUI_CONTEXT_DELETE"/></text></MenuItem>
+                                    </items>
+                                </ContextMenu>
+                            </contextMenu>
+                        </TableView>
+                        <Button fx:id="addDefMon" layoutX="75.0" layoutY="394.0" mnemonicParsing="false" onAction="#onActionAddDefectMon" prefHeight="25.0" prefWidth="72.0" ><text><Constants fx:constant="GUI_BUTTON_ADD"/></text></Button>
+                        <Button fx:id="refreshDefectMon" layoutX="256.0" layoutY="394.0" mnemonicParsing="false" onAction="#onActionRefreshDefectMon" ><text><Constants fx:constant="GUI_BUTTON_REFRESH"/></text></Button>
+                        <Button fx:id="exitDefMon" layoutX="460.0" layoutY="394.0" mnemonicParsing="false" onAction="#onActionExit" ><text><Constants fx:constant="GUI_BUTTON_EXIT"/></text></Button>
+                        <TextField fx:id="defMonPlanSort" layoutX="-9.0" layoutY="343.0" prefHeight="25.0" prefWidth="69.0" />
+                        <TextField fx:id="defMonDateSort" layoutX="60.0" layoutY="343.0" prefHeight="25.0" prefWidth="125.0" />
+                        <TextField fx:id="defMonCountSort" layoutX="185.0" layoutY="343.0" prefHeight="25.0" prefWidth="90.0" />
+                        <TextField fx:id="defMonDefectSort" layoutX="275.0" layoutY="343.0" prefHeight="25.0" prefWidth="338.0" />
+                     </children>
+                  </AnchorPane>
+               </children>
+               <columnConstraints>
+                  <ColumnConstraints />
+                  <ColumnConstraints />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints />
+                  <RowConstraints />
+               </rowConstraints>
+            </GridPane>
+         </content>
+      </Tab>
+      <Tab><text><Constants fx:constant="GUI_DEFECT_TAB"/></text>
+         <content>
+            <GridPane alignment="center" hgap="10" vgap="10">
+               <children>
+                  <AnchorPane prefHeight="462.0" prefWidth="514.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <children>
+                        <TableView fx:id="defectTable" layoutX="-9.0" prefHeight="345.0" prefWidth="591.0">
+                           <columns>
+                              <TableColumn fx:id="defectIdCol" prefWidth="86.0" ><text><Constants fx:constant="GUI_COLUMN_ID"/></text></TableColumn>
+                              <TableColumn fx:id="defectDescCol" prefWidth="504.0" ><text><Constants fx:constant="GUI_COLUMN_DESC"/></text></TableColumn>
+                           </columns>
+                            <contextMenu>
+                                <ContextMenu>
+                                    <items>
+                                        <MenuItem fx:id="contextDeleteDefect" mnemonicParsing="false" ><text><Constants fx:constant="GUI_CONTEXT_DELETE"/></text></MenuItem>
+                                    </items>
+                                </ContextMenu>
+                            </contextMenu>
+                        </TableView>
+                        <Button fx:id="addDefect" layoutX="75.0" layoutY="394.0" mnemonicParsing="false" onAction="#onActionAddDefect" prefHeight="25.0" prefWidth="72.0" ><text><Constants fx:constant="GUI_BUTTON_ADD"/></text></Button>
+                        <Button fx:id="refreshDefect" layoutX="256.0" layoutY="394.0" mnemonicParsing="false" onAction="#onActionRefreshDefect" ><text><Constants fx:constant="GUI_BUTTON_REFRESH"/></text></Button>
+                        <Button fx:id="exitDefect" layoutX="460.0" layoutY="394.0" mnemonicParsing="false" onAction="#onActionExit" ><text><Constants fx:constant="GUI_BUTTON_EXIT"/></text></Button>
+                         <TextField fx:id="defectIdSort" layoutX="-9.0" layoutY="343.0" prefHeight="25.0" prefWidth="86.0" />
+                         <TextField fx:id="defectDescSort" layoutX="77.0" layoutY="343.0" prefHeight="25.0" prefWidth="504.0" />
+                     </children>
+                  </AnchorPane>
+               </children>
+               <columnConstraints>
+                  <ColumnConstraints />
+                  <ColumnConstraints />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints />
+                  <RowConstraints />
+               </rowConstraints>
+            </GridPane>
+         </content>
+      </Tab>
+   </tabs>
+</TabPane>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import sample.Constants.* ?>
+
+
+<GridPane alignment="center" hgap="10" vgap="10" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller.CustomerView">
+    <columnConstraints>
+        <ColumnConstraints />
+        <ColumnConstraints />
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints />
+        <RowConstraints />
+      <RowConstraints />
+    </rowConstraints>
+    <children>
+        <AnchorPane prefHeight="382.0" prefWidth="371.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+         <children>
+            <Button fx:id="cancelButton" blendMode="DIFFERENCE" layoutX="101.0" layoutY="296.0" mnemonicParsing="false" onAction="#cancel" prefHeight="25.0" prefWidth="80.0" text="Отмена">
+               <font>
+                  <Font name="Microsoft JhengHei Light" size="12.0" />
+               </font>
+            </Button>
+            <Label layoutX="105.0" layoutY="14.0" text="ДОБАВЛЕНИЕ ЗАКАЗЧИКА">
+               <font>
+                  <Font name="Microsoft JhengHei Light" size="12.0" />
+               </font>
+            </Label>
+            <Button fx:id="confirmButton" blendMode="DIFFERENCE" layoutX="188.0" layoutY="296.0" mnemonicParsing="false" onAction="#addEntity" prefHeight="25.0" prefWidth="80.0" text="Добавить">
+               <font>
+                  <Font name="Microsoft JhengHei Light" size="12.0" />
+               </font>
+            </Button>
+            <Button fx:id="exitButton" blendMode="DIFFERENCE" layoutX="146.0" layoutY="343.0" mnemonicParsing="false" onAction="#exit" prefHeight="25.0" prefWidth="80.0" text="Завершить">
+               <font>
+                  <Font name="Microsoft JhengHei Light" size="12.0" />
+               </font>
+            </Button>
+            <Label layoutX="50.0" layoutY="119.0" prefHeight="17.0" prefWidth="34.0" text="Заказ">
+               <font>
+                  <Font name="Microsoft JhengHei Light" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="25.0" layoutY="164.0" text="Эл. Почта">
+               <font>
+                  <Font name="Microsoft JhengHei Light" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="25.0" layoutY="205.0" text="Тел. Номер">
+               <font>
+                  <Font name="Microsoft JhengHei Light" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="58.0" layoutY="74.0" text="Имя">
+               <font>
+                  <Font name="Microsoft JhengHei Light" size="12.0" />
+               </font>
+            </Label>
+            <TextField fx:id="nameField" layoutX="101.0" layoutY="70.0" prefHeight="25.0" prefWidth="164.0" />
+            <TextField fx:id="emailField" layoutX="101.0" layoutY="160.0" prefHeight="25.0" prefWidth="164.0" />
+            <TextField fx:id="telNumField1" layoutX="101.0" layoutY="205.0" prefHeight="25.0" prefWidth="41.0" />
+            <TextField fx:id="telNumField2" alignment="CENTER" layoutX="144.0" layoutY="205.0" prefHeight="25.0" prefWidth="41.0" />
+            <TextField fx:id="telNumField3" layoutX="187.0" layoutY="205.0" prefHeight="25.0" prefWidth="36.0" />
+            <TextField fx:id="telNumField4" layoutX="226.0" layoutY="205.0" prefHeight="25.0" prefWidth="41.0" />
+            <ChoiceBox fx:id="orderField" layoutX="101.0" layoutY="115.0" prefHeight="25.0" prefWidth="164.0" />
+            <Label layoutX="150.0" layoutY="207.0" text="(" />
+            <Label layoutX="176.0" layoutY="207.0" text=")" />
+         </children>
+        </AnchorPane>
+    </children>
+</GridPane>

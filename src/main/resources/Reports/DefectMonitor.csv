@@ -1,0 +1,5 @@
+DATE,COUNT,TYPE
+2016-12-21,5,DefectEntity{id=2, type='Нестиранные шнурки', defects=[]}
+2016-12-24,5,DefectEntity{id=2, type='Нестиранные шнурки', defects=[]}
+2016-12-22,6,DefectEntity{id=1, type='Брак подошвы', defects=[]}
+2016-12-25,5,DefectEntity{id=2, type='Нестиранные шнурки', defects=[]}

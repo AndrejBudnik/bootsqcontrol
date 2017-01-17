@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <property name="connection.driver_class">org.postgresql.Driver</property>
+        <property name="connection.url">jdbc:postgresql://localhost:5432/uchet</property>
+        <property name="connection.username">postgres</property>
+        <property name="connection.password">qwe</property>
+
+        <property name="connection.pool_size">1</property>
+        <!-- Enable Hibernate's automatic session context management -->
+        <property name="current_session_context_class">thread</property>
+        <!-- Echo all executed SQL to stdout -->
+        <property name="show_sql">true</property>
+        <!-- Drop and re-create the database schema on startup -->
+        <!--<property name="hbm2ddl.auto">create</property>-->
+        <mapping class="sample.Model.CustomerEntity"/>
+        <mapping class="sample.Model.DefectEntity"/>
+        <mapping class="sample.Model.DefectMonEntity"/>
+        <mapping class="sample.Model.EmployeeEntity"/>
+        <mapping class="sample.Model.PlanEntity"/>
+        <mapping class="sample.Model.ZakazEntity"/>
+        <mapping class="sample.Model.ManagerEntity"/>
+        <!-- DB schema will be updated if needed -->
+        <!-- <property name="hbm2ddl.auto">update</property> -->
+    </session-factory>
+</hibernate-configuration>
